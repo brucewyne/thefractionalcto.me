@@ -32,12 +32,13 @@
     "dev": "nodemon --ext js,hbs,json,yaml --experimental-specifier-resolution=node ./index.js",
     "jest": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
     "jest:ci": "NODE_ENV=ci node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
-    "lint": "eslint ./src/ --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint": "eslint ./src --ignore-path .gitignore --ignore-pattern internals/scripts",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
     "prepare": "husky install",
     "start": "node --experimental-specifier-resolution=node ./index.js",
-    "tailwind": "tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch"
+    "tailwind": "tailwindcss -i public/css/input.css -o ./src/public/css/main.css",
+    "tailwind:watch": "tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch"
   },
   "jest": {
     "testEnvironment": "jest-environment-node",
@@ -46,6 +47,6 @@
   },
   "lint-staged": {
     "src/**/*.js": "yarn lint:fix",
-    "*.{js,css,md}": "prettier --write"
+    "src/**/*.{js,css,md}": "prettier --write"
   }
 }

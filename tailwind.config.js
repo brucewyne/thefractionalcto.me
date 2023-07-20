@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./partials/*", "./pages/*"],
+  content: ["./src/partials/*", "./src/pages/*"],
   theme: {
     extend: {
       screens: {
@@ -26,21 +26,22 @@ module.exports = {
           800: "#1A253F",
         },
         pblue: {
-          100: "#EAF0FF",
-          200: "#EEF3FF",
-          300: "#F4F8FA",
-          500: "#2662FA",
-          600: "#0438BC",
+          100: "#9d4edd",
+          200: "#7b2cbf",
+          300: "#5a189a",
+          500: "#5a189a",
+          600: "#240046",
+          700: "#18012f",
         },
         sky: {
           500: "#D8F9FF"
         },
         porange: {
-          500: "#FFD233",
-          600: "#ffb711",
-          700: "#FDCC04",
-          800: "#d6ac04",
-          900: "#E3B602",
+          500: "#ff9e00",
+          600: "#ff9100",
+          700: "#ff8500",
+          800: "#ff7900",
+          900: "#ff6d00",
 
         },
         seagreen: {

@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "no-underscore-dangle": 0,
+    "no-unused-vars": ["error", { "args": "after-used" }],
+    "no-use-before-define": ["error", { "variables": false }],
+    "radix": 0,
+    "arrow-body-style": 0,
+    "no-param-reassign": [2, { "props": false }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+  },
+  "env": {
+    "node": true,
+    "mocha": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "extends": [
+    "airbnb-base"
+  ]
+}

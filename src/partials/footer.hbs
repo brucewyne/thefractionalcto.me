@@ -1,0 +1,67 @@
+  <!-- Footer  -->
+  <footer class="lg:py-120 py-20 bg-interface-400">
+    <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div
+        class="grid md:grid-cols-12 divide-y md:divide-y-0 lg:divide-x divide-pblue-500 divide-opacity-10 justify-between gap-10"
+      >
+        <div class="md:col-span-6 lg:col-span-4">
+          <a href="{{pages.home}}" class="block mb-7 text-xl font-bold hover:text-pblue-200">
+            The Fractional CTO
+          </a>
+          <p class="text-base">
+            Drawing on a wealth of inventive successes and collaborative expertise,
+            I specialize in transforming BIG dreams into <em>tangible</em> results,
+            all while fostering a spirited environment.
+          </p>
+          <div class="flex space-x-3 mt-7">
+            <a
+              href="{{socials.linkedIn}}"
+              class="text-white hover:bg-porange-500 transition-all text-lg w-10 h-10 rounded-full bg-porange-900 bg-opacity-50 inline-flex justify-center items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-3 pt-8 md:pt-0 lg:pl-12">
+          <div class="mb-7">
+            <span class="text-2xl font-semibold">More</span>
+          </div>
+          <nav>
+            <ul class="space-y-4">
+              {{#each nav}}
+                <li>
+                  <a href="{{this.link}}" class="font-medium transition hover:text-porange-500 text-base">
+                    {{this.label}}
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          </nav>
+        </div>
+        <div class="md:col-span-3 lg:col-span-4 pt-8 md:pt-0 lg:pl-12">
+          <h4 class="mb-7 text-2xl font-semibold">Resources</h4>
+          <nav>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="font-medium transition hover:text-porange-500 text-base">
+                  How much does a Fractional CTO Cost?
+                </a>
+              </li>
+              <li>
+                <a href="#" class="font-medium transition hover:text-porange-500 text-base">
+                  What is a Fractional CTO?
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+</body>
+
+</html>

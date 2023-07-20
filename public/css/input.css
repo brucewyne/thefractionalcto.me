@@ -723,10 +723,10 @@ body {
 
 @keyframes pulse {
   0% {
-    box-shadow: #2662fa 0 0 0 0;
+    box-shadow: #9d4edd 0 0 0 0;
   }
   75% {
-    box-shadow: rgba(38, 98, 250, 0.1) 0 0 0 16px;
+    box-shadow: rgba(255, 158, 0, 0.1) 0 0 0 16px;
   }
 }
 @keyframes pulse-dev {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"  >
+<head>
+  <script>
+    /*
+     *  __/\\\\____________/\\\\_____/\\\\\\\\\\\\_
+     *  _\/\\\\\\________/\\\\\\___/\\\//////////__
+     *   _\/\\\//\\\____/\\\//\\\__/\\\_____________
+     *    _\/\\\\///\\\/\\\/_\/\\\_\/\\\____/\\\\\\\_
+     *     _\/\\\__\///\\\/___\/\\\_\/\\\___\/////\\\_
+     *      _\/\\\____\///_____\/\\\_\/\\\_______\/\\\_
+     *       _\/\\\_____________\/\\\_\/\\\_______\/\\\_
+     *        _\/\\\_____________\/\\\_\//\\\\\\\\\\\\/__
+     *         _\///______________\///___\////////////___
+     *
+     *
+     *  Viewing the page source reminds me of learning HTML in the 90s.
+     *  So if you're here, I thought I'd reward you with some ASCII art.
+     *
+     *  These pages were mostly hand coded, though the design/theme is lifted from
+     *  "Fallow" - a theme you can find on ThemeForest. I haven't pretended to be a
+     *  designer in several years.
+     *
+     *  Backend: Express
+     *  Frontend: Plain ol' HTML5. No JS frameworks other
+     *     than some server side help from handlebars.
+     *  CSS: Tailwind, and I'm not sure how I feel about it.
+     *
+     */
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {{seo.title}}
+  </title>
+  <meta property="og:site_name" content="The Fractional CTO"/>
+  <meta property="og:title" content="{{seo.title}}"/>
+  <meta property="og:url" content="https://www.thefractionalcto.me{{seo.url}}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="{{seo.description}}"/>
+  <meta itemprop="name" content="{{seo.title}}"/>
+  <meta itemprop="url" content="https://www.thefractionalcto.me{{seo.url}}"/>
+  <meta itemprop="description" content="{{seo.description}}"/>
+  <meta name="twitter:title" content="{{seo.title}}"/>
+  <meta name="twitter:url" content="https://www.thefractionalcto.me{{seo.url}}"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:description" content="{{seo.description}}"/>
+  <meta name="description" content="{{seo.description}}" />
+  <!-- Fontawesome -->
+  <link href="/css/font-awesome-all.min.css" rel="stylesheet" />
+  <!-- Main -->
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
