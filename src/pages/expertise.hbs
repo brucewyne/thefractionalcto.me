@@ -3,7 +3,7 @@
 
 <main>
   <!-- Services -->
-  <section class="py-120">
+  <section class="pt-120">
     <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-16 place-items-center mb-14"
@@ -105,6 +105,175 @@
     </div>
   </section>
   <!-- Services End -->
+  <!-- Member Info -->
+  <section class="pb-120">
+    <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <!-- Info Card -->
+      <div class="bg-white mb-10 rounded shadow-customFour p-10">
+
+        <!-- Description -->
+        <div class="px-7 pt-10 pb-11 rounded-md bg-pblue-500 bg-opacity-10 mt-7 z-30 relative">
+          <h4 class="text-interface-700 text-2xl font-semibold mb-3">
+            Technology Expertise
+          </h4>
+          <p class="text-base text-interface-100 leading-snug">
+            Still unsure about hiring me as your Fractional CTO?
+            I get it – you want to understand if my technical expertise
+            meets your tech stack. Here’s the details that may be helpful:
+          </p>
+        </div>
+      </div>
+      <!-- Info Card End -->
+      <!-- Skills  -->
+      <div class="grid lg:grid-cols-2 gap-x-20 gap-y-10">
+        <!-- Backend Languages -->
+        <div class="mt-10">
+          <div class="border-b border-porange-500 pb-3">
+            <h3 class="text-2xl">
+              Backend Languages &amp; Frameworks
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.backend}}
+            <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+              {{this}}
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Backend Languages -->
+        <!-- Database -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Database Management
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.database}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Database -->
+        <!-- FrontEnd -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Frontend Languages &amp; Frameworks
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.frontend}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- FrontEnd -->
+        <!-- Mobile -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Mobile App Development
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.mobile}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Mobile -->
+        <!-- Database -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Database Management
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.database}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Database -->
+        <!-- Data -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Data
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.data}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Data -->
+        <!-- Infra -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Infrastructure &amp; Cloud
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.infrastructure}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Infra -->
+        <!-- Specialties -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Specialties
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.specialties}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Specialties -->
+        <!-- Monitoring -->
+        <div class="mt-10">
+          <div class="border-b border-pblue-100 pb-3">
+            <h3 class="text-2xl">
+              Monitoring
+            </h3>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-3">
+            {{#each skills.monitoring}}
+              <li class="bg-porange-500 block px-4 py-3 rounded-md text-white text-xl">
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Monitoring -->
+      </div>
+    </div>
+  </section>
+  <!-- Member Info End -->
 </main>
 
 {{>footer}}

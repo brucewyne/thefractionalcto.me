@@ -36,6 +36,16 @@ router.get(globals.links.expertise, (request, response) => {
       url: globals.links.expertise,
       description: '',
     },
+    skills: {
+      backend: ['Javascript', 'TypeScript', 'Node.js', 'Express', 'NestJS', 'Python', 'Django', 'Ruby (on Rails)', 'PHP', 'Laravel', 'Symfony', 'ColdFusion'],
+      database: ['SQL', 'MySQL', 'MariaDB', 'MSSQL', 'Postgres', 'NoSQL', 'mongodb', 'dynamodb', 'couchbase', 'Event Driven Databases', 'Kafka', 'FireStore'],
+      frontend: ['React', 'Next.js', 'Vue', 'Nuxt', 'Angular', 'Javascript', 'TypeScript', 'jQuery'],
+      data: ['ETLs &amp; Data Pipelines', 'Snowflake', 'Redshift', 'Data Lakes', 'Analytics', 'Dashboards'],
+      mobile: ['iOS (swift)', 'android (java)', 'React Native', 'expo', 'Flutter'],
+      infrastructure: ['AWS', 'GCP', 'Containerization', 'Docker', 'Kubernetes', 'CI/CD', 'DevOps'],
+      specialties: ['Ecommerce', 'Multi Tenant Software as a Service', 'FinTech'],
+      monitoring: ['Cloudwatch', 'Sentry', 'DataDog', 'LogRocket'],
+    }
   });
 });
 

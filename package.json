@@ -37,7 +37,7 @@
     "lint:watch": "yarn lint --watch",
     "prepare": "husky install",
     "start": "node --experimental-specifier-resolution=node ./index.js",
-    "tailwind": "tailwindcss -i public/css/input.css -o ./src/public/css/main.css",
+    "tailwind": "tailwindcss -i public/css/input.css -o ./public/css/main.css",
     "tailwind:watch": "tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch"
   },
   "jest": {
