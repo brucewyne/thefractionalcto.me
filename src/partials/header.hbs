@@ -16,7 +16,11 @@
           <ul class="nav__list">
             {{#each nav}}
               <li>
+                {{#if this.active}}
+                  <a href="{{this.link}}" class="nav__link hover:text-pblue-500 border-b-2 border-pblue-100">
+                {{else}}
                 <a href="{{this.link}}" class="nav__link hover:text-pblue-500">
+                {{/if}}
                   {{this.label}}
                 </a>
               </li>

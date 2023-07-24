@@ -1,5 +1,7 @@
 const { Router } = require('express');
 const globals = require('./globals');
+const contactFormValidation = require('./middleware/contactFormValidation');
+const {processForm} = require("./utils");
 
 const router = Router();
 
@@ -7,6 +9,12 @@ const router = Router();
 router.get(globals.links.home, (request, response) => {
   return response.render('../src/pages/home.hbs', {
     ...globals,
+    nav: globals.nav.map(navItem => {
+      return {
+        ...navItem,
+        active: navItem.link === request.path
+      };
+    }),
     seo: {
       title: 'The Fractional CTO - Hire a CTO as a Service',
       url: globals.links.home,
@@ -19,6 +27,12 @@ router.get(globals.links.home, (request, response) => {
 router.get(globals.links.engagement, (request, response) => {
   return response.render('../src/pages/engagement.hbs', {
     ...globals,
+    nav: globals.nav.map(navItem => {
+      return {
+        ...navItem,
+        active: navItem.link === request.path
+      };
+    }),
     seo: {
       title: 'The Fractional CTO - Hire a CTO as a Service',
       url: globals.links.engagement,
@@ -31,6 +45,12 @@ router.get(globals.links.engagement, (request, response) => {
 router.get(globals.links.expertise, (request, response) => {
   return response.render('../src/pages/expertise.hbs', {
     ...globals,
+    nav: globals.nav.map(navItem => {
+      return {
+        ...navItem,
+        active: navItem.link === request.path
+      };
+    }),
     seo: {
       title: 'The Fractional CTO - Hire a CTO as a Service',
       url: globals.links.expertise,
@@ -53,18 +73,57 @@ router.get(globals.links.expertise, (request, response) => {
 router.get(globals.links.contact, (request, response) => {
   return response.render('../src/pages/contact.hbs', {
     ...globals,
+    nav: globals.nav.map(navItem => {
+      return {
+        ...navItem,
+        active: navItem.link === request.path
+      };
+    }),
     seo: {
       title: 'The Fractional CTO - Hire a CTO as a Service',
       url: globals.links.contact,
       description: '',
     },
+    showForm: true,
   });
 });
+
+router.post(
+  globals.links.contact,
+  contactFormValidation(),
+  processForm,
+  (request, response) => {
+    return response.render('../src/pages/contact.hbs', {
+      ...globals,
+      nav: globals.nav.map(navItem => {
+        return {
+          ...navItem,
+          active: navItem.link === request.path
+        };
+      }),
+      seo: {
+        title: 'The Fractional CTO - Hire a CTO as a Service',
+        url: globals.links.contact,
+        description: '',
+      },
+      showForm: !request.submitSuccess,
+      showSuccess: request.submitSuccess,
+      formErrors: request.formErrors,
+      form: request.body,
+    });
+  }
+);
 
 // Consultation
 router.get(globals.links.consultation, (request, response) => {
   return response.render('../src/pages/consultation.hbs', {
     ...globals,
+    nav: globals.nav.map(navItem => {
+      return {
+        ...navItem,
+        active: navItem.link === request.path
+      };
+    }),
     seo: {
       title: 'The Fractional CTO - Hire a CTO as a Service',
       url: globals.links.consultation,

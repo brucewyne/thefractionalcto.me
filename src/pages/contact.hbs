@@ -1,6 +1,153 @@
 {{>head}}
 {{>header}}
 
-Contact
+<main>
+  <!-- Overview -->
+  <section class="pt-120 pb-4" style="background: url('/images/hero-1-bg.jpg') no-repeat fixed center center/cover;">
+    <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-16 place-items-center my-16">
+        <div class="lg:col-span-2">
+          <h1 class="text-interface-500 font-bold text-4xl leading-normal lg:text-5xl capitalize lg:leading-snug">
+            Meet and Greet
+          </h1>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-interface-200 text-xl">
+            I’m so excited to chat and learn about your goals and challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Overview -->
+  <!-- Contact Form -->
+  <section class="py-20 lg:py-120">
+    <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10 xl:grid-cols-7">
+        <!-- left -->
+        <div class="xl:col-span-3 w-full">
+          <h2 class="text-interface-500 font-bold text-4xl leading-normal xl:text-5xl capitalize xl:leading-snug">
+            Contact
+          </h2>
+          <h3 class="text-2xl font-medium">
+            Start the conversation. Tell me how I can help.
+          </h3>
+        </div>
+        <!--/ left -->
+        <!-- Contact Form -->
+        <div class="xl:col-span-4 w-full">
+          <div class="px-8 py-10 bg-[#F0F4FC] rounded-lg">
+            {{#if showForm }}
+            <form action="/contact" method="post">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5">
+                <div>
+                  <label for="first_name" class="block mb-2 text-base font-medium text-interface-200">First Name *</label>
+                  <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    placeholder=""
+                    required
+                    class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm"
+                    {{#if form.first_name}}
+                    value="{{form.first_name}}"
+                    {{/if}}
+                  />
+                  {{#if formErrors.first_name}}
+                    <span class="text-red-800 text-sm">
+                      {{formErrors.first_name}}
+                    </span>
+                  {{/if}}
+                </div>
+                <div>
+                  <label for="last_name" class="block mb-2 text-base font-medium text-interface-200">Last Name *</label>
+                  <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder=""
+                    required
+                    class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm"
+                    {{#if form.last_name}}
+                    value="{{form.last_name}}"
+                    {{/if}}
+                  />
+                  {{#if formErrors.last_name}}
+                    <span class="text-red-800 text-sm">
+                      {{formErrors.last_name}}
+                    </span>
+                  {{/if}}
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-base font-medium text-interface-200">E-mail *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder=""
+                    required
+                    class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm"
+                    {{#if form.email}}
+                    value="{{form.email}}"
+                    {{/if}}
+                  />
+                  {{#if formErrors.email}}
+                    <span class="text-red-800 text-sm">
+                      {{formErrors.email}}
+                    </span>
+                  {{/if}}
+                </div>
+                <div>
+                  <label for="telephone" class="block mb-2 text-base font-medium text-interface-200">Phone</label>
+                  <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    placeholder=""
+                    class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm"
+                    {{#if form.telephone}}
+                    value="{{form.telephone}}"
+                    {{/if}}
+                  />
+                </div>
+                <div class="md:col-span-2">
+                  <label for="message" class="block mb-2 text-base font-medium text-interface-200">How can I help? *</label>
+                  <textarea
+                    type="text"
+                    id="message"
+                    name="message"
+                    placeholder=""
+                    required
+                    class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm resize-none h-40"
+                  >{{#if form.message}}{{form.message}}{{/if}}</textarea>
+                  {{#if formErrors.message}}
+                    <span class="text-red-800 text-sm">
+                      {{formErrors.message}}
+                    </span>
+                  {{/if}}
+                </div>
+              </div>
+              <div class="mt-8 flex justify-end">
+                <button
+                  class="py-4 px-6 rounded-lg bg-pblue-500 text-white font-medium text-lg transition-all hover:bg-pblue-600"
+                >
+                  Send Now
+                </button>
+              </div>
+            </form>
+            {{/if}}
+            {{#if showSuccess}}
+              <span class="text-lg">
+                Alright - Wow. I'm so excited to speak with you more! I promise you'll hear back from me soon!
+              </span>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Form End -->
+
+</main>
 
 {{>footer}}

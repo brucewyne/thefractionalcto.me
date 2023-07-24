@@ -6,14 +6,21 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sendgrid/client": "^7.7.0",
+    "@sendgrid/mail": "^7.7.0",
     "connect-livereload": "^0.6.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "form-data": "^4.0.0",
     "hbs": "^4.2.0",
     "livereload": "^0.9.3",
+    "nodemailer": "^6.9.4",
     "react-dev-utils": "^12.0.1"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
     "eslint": "^8.40.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
@@ -24,8 +31,6 @@
     "nodemon": "^2.0.7",
     "prettier": "2.8.8",
     "supertest": "^6.3.3",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
     "tailwindcss": "^3.3.3"
   },
   "scripts": {
