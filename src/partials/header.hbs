@@ -1,10 +1,10 @@
 <!-- Header -->
 <header class="main-header">
-  <div class="main-menu sticky-header">
+  <div class="main-menu">
     <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 mt-4">
       <nav class="nav">
         <div class="nav__data">
-          <a href="{{links.home}}" class="nav__logo hover:text-pblue-500">
+          <a href="{{pages.home.path}}" class="nav__logo hover:text-pblue-500">
             The Fractional CTO
           </a>
           <div class="nav__toggle" id="nav-toggle">
@@ -17,9 +17,9 @@
             {{#each nav}}
               <li>
                 {{#if this.active}}
-                  <a href="{{this.link}}" class="nav__link hover:text-pblue-500 border-b-2 border-pblue-100">
+                  <a href="{{this.path}}" class="nav__link hover:text-pblue-500 border-b-2 border-pblue-100">
                 {{else}}
-                <a href="{{this.link}}" class="nav__link hover:text-pblue-500">
+                <a href="{{this.path}}" class="nav__link hover:text-pblue-500">
                 {{/if}}
                   {{this.label}}
                 </a>

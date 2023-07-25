@@ -763,34 +763,19 @@ select{
   margin-right: auto;
 }
 
-.my-12{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.my-14{
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-}
-
 .my-16{
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
-.my-7{
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-}
-
-.my-6{
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .mb-10{
@@ -861,6 +846,10 @@ select{
   display: inline-flex;
 }
 
+.table{
+  display: table;
+}
+
 .grid{
   display: grid;
 }
@@ -925,12 +914,12 @@ select{
   resize: none;
 }
 
-.list-inside{
-  list-style-position: inside;
-}
-
 .list-decimal{
   list-style-type: decimal;
+}
+
+.list-disc{
+  list-style-type: disc;
 }
 
 .auto-cols-max{
@@ -1255,6 +1244,11 @@ select{
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pb-10{
@@ -2443,16 +2437,16 @@ body {
     display: block;
   }
 
+  .lg\:max-w-3xl{
+    max-width: 48rem;
+  }
+
   .lg\:max-w-7xl{
     max-width: 80rem;
   }
 
-  .lg\:max-w-xl{
-    max-width: 36rem;
-  }
-
-  .lg\:max-w-3xl{
-    max-width: 48rem;
+  .lg\:max-w-5xl{
+    max-width: 64rem;
   }
 
   .lg\:grid-cols-2{
@@ -2486,29 +2480,14 @@ body {
     padding-right: 2rem;
   }
 
-  .lg\:py-120{
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .lg\:py-80{
-    padding-top: 20rem;
-    padding-bottom: 20rem;
-  }
-
-  .lg\:py-36{
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-  }
-
-  .lg\:py-3{
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
   .lg\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:py-120{
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .lg\:pb-16{

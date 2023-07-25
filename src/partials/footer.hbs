@@ -32,7 +32,7 @@
             <ul class="space-y-4">
               {{#each nav}}
                 <li>
-                  <a href="{{this.link}}" class="font-medium transition hover:text-porange-500 text-base">
+                  <a href="{{this.path}}" class="font-medium transition hover:text-porange-500 text-base">
                     {{this.label}}
                   </a>
                 </li>
@@ -44,16 +44,13 @@
           <h4 class="mb-7 text-2xl font-semibold">Resources</h4>
           <nav>
             <ul class="space-y-4">
+              {{#each resources}}
               <li>
-                <a href="/resources/how-much-does-a-fractional-cto-cost" class="font-medium transition hover:text-porange-500 text-base">
-                  How much does a Fractional CTO Cost?
+                <a href="/resources{{this.path}}" class="font-medium transition hover:text-porange-500 text-base">
+                  {{this.label}}
                 </a>
               </li>
-              <li>
-                <a href="/resources/what-is-a-fractional-cto" class="font-medium transition hover:text-porange-500 text-base">
-                  What is a Fractional CTO?
-                </a>
-              </li>
+              {{/each}}
             </ul>
           </nav>
         </div>
