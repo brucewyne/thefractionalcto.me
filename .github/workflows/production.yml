@@ -13,24 +13,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - id: auth
-        name: Authenticate with Google Cloud
-        uses: google-github-actions/auth@v0
-        with:
-          token_format: access_token
-          credentials_json: ${{secrets.GCP_SERVICE_KEY_JSON}}
-          access_token_lifetime: 300s
-
       - name: Login to Artifact Registry
         uses: docker/login-action@v1
         with:
-          registry: us-west2-docker.pkg.dev
-          username: oauth2accesstoken
-          password: ${{ steps.auth.outputs.access_token }}
+          username: ${{secrets.DOCKER_HUB_USER}}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
       - name: Docker Build and Push
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: us-central1-docker.pkg.dev/modern-bond-393821/thefractionalcto:build-${{ github.run_number }}
+          tags: brucewyne/thefractionalcto:build-${{ github.run_number }}
