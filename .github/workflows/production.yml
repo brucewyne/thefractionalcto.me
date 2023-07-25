@@ -46,4 +46,4 @@ jobs:
         with:
           service: 'thefractionalcto'
           image: 'brucewyne/thefractionalcto:build-${{ github.run_number }}'
-          credentials: ${{ secrets.GCP_SERVICE_KEY_JSON }}
+          service_account: ${{secrets.GCP_SERVICE_ACCOUNT}}
