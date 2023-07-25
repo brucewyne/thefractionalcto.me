@@ -27,3 +27,18 @@ jobs:
           tags: |
             brucewyne/thefractionalcto:build-${{ github.run_number }}
             brucewyne/thefractionalcto:latest
+
+  deploy:
+    name: Deploy Image to GCP Cloud Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: ${{secrets.GCP_SERVICE_KEY_JSON}}
+
+      - name: Update Image
+        uses: 'google-github-actions/deploy-cloudrun@v1'
+        with:
+          service: 'thefractionalcto'
+          image: 'brucewyne/thefractionalcto:build-${{ github.run_number }}'
