@@ -33,6 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
       - name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v1'
         with:
@@ -43,3 +46,4 @@ jobs:
         with:
           service: 'thefractionalcto'
           image: 'brucewyne/thefractionalcto:build-${{ github.run_number }}'
+          credentials: ${{ secrets.GCP_SERVICE_KEY_JSON }}
