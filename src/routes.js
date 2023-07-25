@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const globals = require('./globals');
+const { resources, globals } = require('./globals');
 const contactFormValidation = require('./middleware/contactFormValidation');
 const {processForm} = require("./utils");
 
@@ -129,6 +129,25 @@ router.get(globals.links.consultation, (request, response) => {
       url: globals.links.consultation,
       description: '',
     },
+  });
+});
+
+Object.keys(resources).forEach(resourceUrl => {
+  router.get(`${globals.links.resources}/${resourceUrl}`, (request, response) => {
+    return response.render(`../src/pages/resources/${resourceUrl}.hbs`, {
+      ...globals,
+      nav: globals.nav.map(navItem => {
+        return {
+          ...navItem,
+          active: navItem.link === request.path
+        };
+      }),
+      seo: {
+        title: resources[resourceUrl].seo.title,
+        url: `${globals.links.resources}/${resourceUrl}`,
+        description: resources[resourceUrl].seo.description,
+      },
+    })
   });
 });
 

@@ -4,6 +4,22 @@ const links = {
   expertise: '/expertise',
   contact: '/contact',
   consultation: '/free-consultation',
+  resources: '/resources',
+};
+
+const resources = {
+  'how-much-does-a-fractional-cto-cost': {
+    seo: {
+      title: 'How Much Does a Fractional CTO Cost?',
+      description: '',
+    },
+  },
+  'what-is-a-fractional-cto': {
+    seo: {
+      title: 'What is a Fractional CTO? Full Time vs Fractional CTO',
+      description: '',
+    },
+  },
 };
 
 const globals = {
@@ -31,4 +47,7 @@ const globals = {
   },
 };
 
-module.exports = globals;
+module.exports = {
+  globals,
+  resources,
+};
