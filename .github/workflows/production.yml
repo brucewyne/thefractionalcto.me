@@ -64,7 +64,7 @@ jobs:
   cdn:
     name: Cloudflare Cache Purge
     runs-on: ubuntu-latest
-    needs: build
+    needs: deploy
     steps:
       - name: Purge Cache
         uses: jakejarvis/cloudflare-purge-action@master
