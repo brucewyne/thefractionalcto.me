@@ -23,7 +23,7 @@ $ yarn tailwind:watch
 ## Production Deployment
 
 Production basically follows these steps:
-1. Run `yarn lint` and shit to make sure I didn't screw it all up.
+1. Run `yarn lint` to make sure I didn't screw it up too much.
 2. Run `yarn tailwind` to compile the CSS.
 3. Build docker image and push it to Docker Hub
 4. Update a GCP Cloud Run Service with the new image
