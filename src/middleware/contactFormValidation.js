@@ -14,7 +14,7 @@ const contactFormValidation = () => [
     .isLength({ min: 1 })
     .withMessage('I\'d love to be able to respond to this message.')
     .isEmail()
-    .withMessage("Your email isn't properly formatted.")
+    .withMessage("Your email isn't properly formatted."),
 ];
 
 module.exports = contactFormValidation;

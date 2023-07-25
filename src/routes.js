@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { resources, globals } = require('./globals');
+const { globals } = require('./globals');
 const contactFormValidation = require('./middleware/contactFormValidation');
 const { processForm } = require('./utils');
 

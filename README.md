@@ -1,5 +1,13 @@
 # TheFractionalCTO.me site
 
+[https://thefractionalcto.me](https://thefractionalcto.me)
+
+A stupid simple Brochure site.
+
+**Backend**: Express \
+**FrontEnd**: Plain ol' HTML. No JS frameworks other than some server side help from handlebars. \
+**CSS**: Tailwind, and I'm not sure how I feel about it.
+
 ## Local Development
 
 ```bash
@@ -15,6 +23,7 @@ $ yarn tailwind:watch
 ## Production Deployment
 
 Production basically follows these steps:
-1. Run `yarn tailwind` to compile the CSS.
-2. Run `yarn lint` and shit to make sure I didn't screw it all up.
-3. Not sure where it's going to deploy to yet.
+1. Run `yarn lint` and shit to make sure I didn't screw it all up.
+2. Run `yarn tailwind` to compile the CSS.
+3. Build docker image and push it to Docker Hub
+4. Update a GCP Cloud Run Service with the new image

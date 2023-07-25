@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */ // friendlier with formdata/sendgrid/sheets
 const { validationResult } = require('express-validator');
 const FormData = require('form-data');
 const sendgridClient = require('@sendgrid/client');
@@ -21,28 +22,27 @@ const addToSendGridList = async (formData) => {
       email: formData.email,
       first_name: formData.first_name,
       last_name: formData.last_name,
-    }
+    },
   ];
 
   const request = {
-    url: `/v3/marketing/contacts`,
+    url: '/v3/marketing/contacts',
     method: 'PUT',
     body: {
       contacts,
       list_ids,
-    }
-  }
+    },
+  };
 
   await sendgridClient.request(request);
+};
 
-}
-
-sendEmailNotification = (formData) => {
+const sendEmailNotification = (formData) => {
   sendgridMail.setApiKey(process.env.SENDGRID_API_KEY);
   const email = {
     to: process.env.CONTACT_FORM_NOTIFICATION_TO,
     from: process.env.CONTACT_FORM_NOTIFICATION_FROM,
-    subject: `New Contact Form Submission`,
+    subject: 'New Contact Form Submission',
     text: `
       Name: ${formData.first_name} ${formData.last_name}
       Email: ${formData.email}
@@ -50,24 +50,26 @@ sendEmailNotification = (formData) => {
     `,
   };
   sendgridMail.send(email);
-}
+};
 
 const processForm = async (request, response, next) => {
   const formValidation = validationResult(request);
   const isValid = !formValidation.errors.length;
   request.submitSuccess = isValid;
   const formErrors = {};
-  //pass any errors back on the request to render in HBS.
+  // pass any errors back on the request to render in HBS.
   if (!isValid) {
-    formValidation.errors.forEach(error => {
+    formValidation.errors.forEach((error) => {
       if (!formErrors[error.path]) {
         formErrors[error.path] = error.msg;
       }
     });
     request.formErrors = formErrors;
   } else {
-    //no errors? store the data in places
-    const { email, first_name, last_name, telephone, message } = request.body;
+    // no errors? store the data in places
+    const {
+      email, first_name, last_name, telephone, message,
+    } = request.body;
     const safeBody = {
       email,
       first_name,
@@ -82,8 +84,8 @@ const processForm = async (request, response, next) => {
     sendEmailNotification(safeBody);
   }
   next();
-}
+};
 
 module.exports = {
   processForm,
-}
+};
