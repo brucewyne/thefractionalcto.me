@@ -100,7 +100,7 @@ body {
 }
 
 /* For Mobile Devices */
-@media screen and (max-width: 1118px) {
+@media screen and (max-width: 1023px) {
   .nav {
     padding: 16px;
   }
@@ -220,7 +220,7 @@ body {
 }
 
 /* For large */
-@media screen and (min-width: 1118px) {
+@media screen and (min-width: 1024px) {
   /* nav */
   .nav {
     display: flex;

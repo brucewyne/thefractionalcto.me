@@ -17,7 +17,7 @@
             {{#each nav}}
               <li>
                 {{#if this.active}}
-                  <a href="{{this.path}}" class="nav__link hover:text-pblue-500 border-b-2 border-pblue-100">
+                  <a href="{{this.path}}" class="nav__link hover:text-pblue-500 xl:border-b-2 xl:border-pblue-100">
                 {{else}}
                 <a href="{{this.path}}" class="nav__link hover:text-pblue-500">
                 {{/if}}
@@ -26,29 +26,17 @@
               </li>
             {{/each}}
           </ul>
+          <div class="block lg:hidden ml-5">
+            <a href="{{pages.consultation.path}}" class="bg-pblue-500 hover:bg-pblue-600 group text-white px-6 py-4 font-medium rounded-lg inline-flex justify-center items-center transition">
+              <span>Book Free Consultation</span>
+              <i class="ml-2 fa fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <div class="hidden xl:block">
-          <a
-            href="{{pages.consultation.path}}"
-            class="bg-pblue-500 hover:bg-pblue-600 group text-white px-6 py-4 font-medium rounded-lg inline-flex justify-center items-center transition"
-          >
+        <div class="hidden lg:block">
+          <a href="{{pages.consultation.path}}" class="bg-pblue-500 hover:bg-pblue-600 group text-white px-6 py-4 font-medium rounded-lg inline-flex justify-center items-center transition">
             <span>Book Free Consultation</span>
-            <svg
-              class="stroke-white transform translate transition-transform group-hover:translate-x-2"
-              width="24"
-              height="25"
-              viewBox="0 0 24 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 16.5L18 12.5M18 12.5L14 8.5M18 12.5L6 12.5"
-
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <i class="ml-2 fa fa-arrow-right"></i>
           </a>
         </div>
       </nav>
