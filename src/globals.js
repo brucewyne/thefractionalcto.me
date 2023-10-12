@@ -3,25 +3,27 @@ const pages = {
     label: 'Meet Michael',
     path: '/',
     seo: {
-      title: 'The Fractional CTO — Hire a CTO as a Service',
+      title: 'Get the Best Fractional CTO Services - The Fractional CTO',
       description:
-        'CTO as a Service: Get 100% of the experience from a seasoned technical executive at a fraction of the cost',
+        'Get the right Fractional CTO for your organization, whether you need an Interim, Part-Time, or Contract CTO. I provide startups and businesses with a variety of CTO engagement options!',
     },
   },
   engagement: {
     label: 'CTO as a Service',
     path: '/cto-as-a-service',
     seo: {
-      title: 'The Fractional CTO — Engaging with a CTO as a Service',
-      description: '',
+      title: 'CTO as a Service | Expert Technology Leadership - The Fractional CTO',
+      description:
+        'Discover CTO as a Service with a Fractional CTO. An experienced CTO to provide strategic technology leadership for your business needs. Explore service options now.',
     },
   },
   expertise: {
     label: 'Expertise',
     path: '/expertise',
     seo: {
-      title: 'Product Engineering Expertise &mdash; The Fractional CTO',
-      description: '',
+      title: 'Fractional CTO Expertise | The Fractional CTO',
+      description:
+        'Explore if my Fractional CTO expertise matches the services you need. An experienced Fractional CTO offering strategic technology leadership. Hire a technical strategic partner for your business',
     },
   },
   contact: {
